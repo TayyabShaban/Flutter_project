@@ -22,7 +22,7 @@ class _WelcomePageState extends State<WelcomePage> {
           onPressed: navigateToSignIn,
           child: Text('Sign In'),
         ),
-            RaisedButton(
+        RaisedButton(
               onPressed: navigateToSignUp,
               child: Text('Sign Up'),
             )

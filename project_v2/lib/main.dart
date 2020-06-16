@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'Pages/Setup/welcome.dart';
+import 'package:projectv2/Pages/Setup/usermanagement.dart';
+
+//import 'Pages/Setup/welcome.dart';
 
 void main() => runApp(MyApp());
 
@@ -8,11 +10,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Sign In',
+      title: 'Main',
       theme: ThemeData(
          primarySwatch: Colors.green,
       ),
-      home: WelcomePage(),
+     home: UserManagement().handleAuth(),
+      //home: WelcomePage(),
     );
   }
 }

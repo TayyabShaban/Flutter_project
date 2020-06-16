@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:projectv2/Pages/home.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:projectv2/Pages/dashboard.dart';
+
 
 class LoginPage extends StatefulWidget {
   @override
@@ -70,17 +71,10 @@ class _LoginPageState extends State<LoginPage> {
     if (formState.validate()){
       formState.save();
       try{
-        // used due to error
-        //FirebaseUser user = (await FirebaseAuth.instance.signInWithEmailAndPassword(email: _email, password: _password)).user;
-       // Navigator.push(context, MaterialPageRoute(builder: (context) =>Home()));
-        //actual used in tutorial
-        //FirebaseUser user = await FirebaseAuth.instance.signInWithEmailAndPassword(email: _email, password: _password);
-       // AuthResult user = await FirebaseAuth.instance.signInWithEmailAndPassword(email: _email, password: _password);
-       //Future<AuthResult> user = FirebaseAuth.instance.signInWithEmailAndPassword(email: _email, password: _password);
 
         AuthResult result=await FirebaseAuth.instance.signInWithEmailAndPassword(email: _email, password: _password);
         FirebaseUser user=result.user;
-        Navigator.push(context, MaterialPageRoute(builder: (context) =>Home()));
+        Navigator.push(context, MaterialPageRoute(builder: (context) =>DashboardPage()));
       }catch(e){
         print(e.message);
       }

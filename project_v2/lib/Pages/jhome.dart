@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-class Home extends StatefulWidget {
+class JHome extends StatefulWidget {
   @override
-  _HomeState createState() => _HomeState();
+  _JHomeState createState() => _JHomeState();
 }
 
-class _HomeState extends State<Home> {
+class _JHomeState extends State<JHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Senior Home'),
+        title: Text('Junior Home'),
         centerTitle: true,
       ),
     );
